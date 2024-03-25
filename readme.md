@@ -2,6 +2,8 @@
 
 [![Vue.js Introduction](./img/vue.png)](https://vuejs.org/guide/introduction.html)
 
+# Introduzione
+
 [Vue.js](https://vuejs.org/guide/introduction.html) - Introduction
 
 ## _Cos'è Vue_
@@ -75,7 +77,7 @@ button {
 
 I componenti a file singolo (**SFC**), sono file che contengono incapsulato tutto ciò che interessa il componente che vogliamo includere, ovvero, JavaScript/Vue all'interno del tag **script**, HTML nel **template** e CSS nel tag **style**.  Saranno file con estensione ***.vue**.
 
-## Tipi di Api
+## _Tipi di Api_
 
 I componenti di Vue ossono essere di due tipi:
 
@@ -150,3 +152,17 @@ onMounted(() => {
   <button @click="increment">Count is: {{ count }}</button>
 </template>
 ```
+
+**QUALE SCEGLIERE?**
+
+Entrmbi i sistemi sono adatti a molteplici usi e le Options sono implementate sulle Api delle Composition.
+
+_Le Options API_ hanno un aspetto più intuitivo per chi è avvezzo alla programazione ad oggetti (OOP).
+
+_Le Composition API_ danno maggiore "libertà" ma a patto di comprendere bene il funzionamento della reactivity di Vue. Si prestano a progetti complessi e App a pagina singola.
+
+#  La sintassi Template
+[Vue.js](https://vuejs.org/guide/essentials/template-syntax.html) - Template Sintax
+
+
+
