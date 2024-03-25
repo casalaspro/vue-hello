@@ -12,12 +12,12 @@
   L'esempio mostra un semplice contatore. Premendo il bottone si incrementa la variabile.
 
 ```sh
-import { createApp, ref } from 'vue'
+import { createApp } from 'vue'
 
 createApp({
-  setup() {
+  data() {
     return {
-      count: ref(0)
+      count: 0
     }
   }
 }).mount('#app')
@@ -37,4 +37,6 @@ L'esempio indica due caratteristiche importanti:
 
 - La reattività (_#1/2_) - il contatore si aggiorna _in diretta_.
 - Il rendering dichirativo (_#2/2_) - la sintassi è l'HTML con l'aggiunta di elementi che vue.js riconosce.
+
+
 
