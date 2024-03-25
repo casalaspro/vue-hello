@@ -164,5 +164,21 @@ _Le Composition API_ danno maggiore "libertà" ma a patto di comprendere bene il
 #  La sintassi Template
 [Vue.js](https://vuejs.org/guide/essentials/template-syntax.html) - Template Sintax
 
+Vue sfrutta la sintassi dichiarativa dall'HTML è, sotto la scocca, trasforma le dichiarazioni in codice javaScript performante. Inoltre, possiamo accedere direttamente alle informazioni dei componenti, dentro le dichiarazioni.
+
+## _Text Interpolation_
+
+```md
+<span>Message: {{ msg }}</span>
+```
+
+Si dichiara la variabile interessata all'interno delle doppie graffe (baffi).
+
+Il contenuto della variabile, se modificato, verrà aggiornato automaticamente.
+
+## _Raw HTML_
+
+
+
 
 
