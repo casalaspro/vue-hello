@@ -42,7 +42,7 @@ L'esempio indica due caratteristiche importanti:
 
 Alecune potenzialità di Vue
 
-- Miglioramento dell'HTML statico (senza una fase di creazione **???**)
+- Miglioramento dell'HTML statico (senza una fase di creazione **???** :question: )
 - Incorporamento come componenti Web in qualsiasi pagina
 - Applicazione a pagina singola (SPA)
 - Full Stack/Rendering lato server (SSR)
@@ -82,7 +82,7 @@ I componenti di Vue ossono essere di due tipi:
 - Options API
 - Composition API
 
-**LE OPTIONS API**
+**OPTIONS API**
 
 La logica del componente è definita in un oggetto di opzioni come ```data```, ```methods``` e  ```mounted```. Le proprietà dell'oggetto sono esposte nella funzione mediante il "puntatore" ```.this```.
 
@@ -112,6 +112,38 @@ export default {
     console.log(`The initial count is ${this.count}.`)
   }
 }
+</script>
+
+<template>
+  <button @click="increment">Count is: {{ count }}</button>
+</template>
+```
+
+**COMPOSITION API**
+
+Con le composition API definiamo la logica del componente importando le funzioni API.
+```md
+ <script setup>
+ ```
+ L'uso di ```<script setup>``` ci permette di usare le composition API, accedendo a variabili e funzioni di alto livello, con meno testo boilerplate (testo standard).
+
+Per esempio:
+ ```js
+ <script setup>
+import { ref, onMounted } from 'vue'
+
+// reactive state
+const count = ref(0)
+
+// functions that mutate state and trigger updates
+function increment() {
+  count.value++
+}
+
+// lifecycle hooks
+onMounted(() => {
+  console.log(`The initial count is ${count.value}.`)
+})
 </script>
 
 <template>
