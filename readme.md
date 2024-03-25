@@ -75,4 +75,46 @@ button {
 
 I componenti a file singolo (**SFC**), sono file che contengono incapsulato tutto ciò che interessa il componente che vogliamo includere, ovvero, JavaScript/Vue all'interno del tag **script**, HTML nel **template** e CSS nel tag **style**.  Saranno file con estensione ***.vue**.
 
+## Tipi di Api
 
+I componenti di Vue ossono essere di due tipi:
+
+- Options API
+- Composition API
+
+**LE OPTIONS API**
+
+La logica del componente è definita in un oggetto di opzioni come ```data```, ```methods``` e  ```mounted```. Le proprietà dell'oggetto sono esposte nella funzione mediante il "puntatore" ```.this```.
+
+```js
+<script>
+export default {
+  // Properties returned from data() become reactive state
+  // and will be exposed on `this`.
+  data() {
+    return {
+      count: 0
+    }
+  },
+
+  // Methods are functions that mutate state and trigger updates.
+  // They can be bound as event handlers in templates.
+  methods: {
+    increment() {
+      this.count++
+    }
+  },
+
+  // Lifecycle hooks are called at different stages
+  // of a component's lifecycle.
+  // This function will be called when the component is mounted.
+  mounted() {
+    console.log(`The initial count is ${this.count}.`)
+  }
+}
+</script>
+
+<template>
+  <button @click="increment">Count is: {{ count }}</button>
+</template>
+```
