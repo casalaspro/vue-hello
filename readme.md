@@ -286,6 +286,29 @@ Le direttive accettano solo un'espressione ad eccezione di ```v-on```, ```v-for`
 ```
 Qui la direttiva inserisce/rimuove il p a seconda della veridicità della viariabile ```seen```.
 
+**ARGOMENTI**
+
+Alcune direttive accettano un argomento a seguito dei due punti: ```:href``` ad esempio. 
+
+```md
+<a v-bind:href="url"> ... </a>
+
+<!-- shorthand -->
+<a :href="url"> ... </a>
+```
+In questo caso il contenuto della variabile ```url``` viene inserita nell'attributo ```href``` dall'attributo speciale di Vue ```v-bind```.
+
+```md
+<a v-on:click="doSomething"> ... </a>
+
+<!-- shorthand -->
+<a @click="doSomething"> ... </a>
+```
+Qui invece ```v-on``` è l'attributo speciale che inserisce un eventListener all'elemento ed il suo argomento è il tipo di evento ```click```. Si può notare l'abbreviazione con la ```@```.
+
+
+
+
 
 
 
