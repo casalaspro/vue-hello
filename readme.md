@@ -178,12 +178,44 @@ Il contenuto della variabile, se modificato, verrà aggiornato automaticamente.
 
 ## _Raw HTML_
 
-```js
+```md
 <p>Using text interpolation: {{ rawHtml }}</p>
 <p>Using v-html directive: <span v-html="rawHtml"></span></p>
 ```
 
 La ```v-html``` viene definita _direttiva_ ed è un attributo speciale, interpretato da Vue, per l'inserimento di stringhe di HTML senza che, appunto, vengano interpretate come una stringa. Le direttive hanno tutte il prefisso ```v-```.
+
+## _Attribute Bindings (associazioni di attributi)_
+
+I baffi non possono essere usati all'interno degli attributi. In alternativa si userà una direttiva ```v-bind```.
+
+```md
+<div v-bind:id="dynamicId"></div>
+```
+
+Nell'esempio si interviene sull'id dell'elemento modificando dinamicamente la variabile ```dynamicId```.
+
+**ABBREVIAZIONE**
+
+```md
+<div :id="dynamicId"></div>
+```
+
+***quando la variabile ha lo stesso nome dell'attributo***
+
+```md
+<!-- same as :id="id" -->
+<div :id></div>
+
+<!-- this also works -->
+<div v-bind:id></div>
+```
+
+
+
+
+
+
 
 
 
