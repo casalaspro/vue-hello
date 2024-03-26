@@ -178,6 +178,15 @@ Il contenuto della variabile, se modificato, verrà aggiornato automaticamente.
 
 ## _Raw HTML_
 
+```js
+<p>Using text interpolation: {{ rawHtml }}</p>
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+```
+
+La ```v-html``` viene definita _direttiva_ ed è un attributo speciale, interpretato da Vue, per l'inserimento di stringhe di HTML senza che, appunto, vengano interpretate come una stringa. Le direttive hanno tutte il prefisso ```v-```.
+
+
+
 
 
 
