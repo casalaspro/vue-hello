@@ -219,6 +219,24 @@ Nell'esempio si interviene sull'id dell'elemento modificando dinamicamente la va
 
 In questo caso il ```v-bind``` va ad inserire il contenuto della variabile solo se è ```TRUE``` o se la stringa è vuota ```:disabled=""```.
 
+**DYNAMICALLY BINDING MULTIPLE ATTRIBUTE (associazione dinamica di più attributi)**
+
+```js
+data() {
+  return {
+    objectOfAttrs: {
+      id: 'container',
+      class: 'wrapper'
+    }
+  }
+}
+```
+>_Con un oggetto JavaScript così, ```v-bind``` può accompagnare solo_
+
+```md
+<div v-bind="objectOfAttrs"></div>
+```
+
 
 
 
