@@ -239,6 +239,33 @@ data() {
 <div v-bind="objectOfAttrs"></div>
 ```
 
+**USARE ESPRESSIONI JAVASCRIPT**
+
+```js
+{{ number + 1 }}
+
+{{ ok ? 'YES' : 'NO' }}
+
+{{ message.split('').reverse().join('') }}
+
+<div :id="`list-${id}`"></div>
+```
+Possono essere usate
+- all'interno dei baffi
+- all'interno dei ```v-bind```
+
+**UNA SOLA ESPRESSIONE**
+
+```md
+<!-- questa è una dichiarazione, non un'espressione: -->
+{{ var a = 1 }}
+
+<!-- il controllo di flusso non funzionerà, usare un'espressione ternaria -->
+{{ if (ok) { return message } }}
+```
+
+
+
 
 
 
