@@ -263,7 +263,19 @@ Possono essere usate
 <!-- il controllo di flusso non funzionerà, usare un'espressione ternaria -->
 {{ if (ok) { return message } }}
 ```
+**RICHIAMO DELLE FUNZIONI**
 
+```md
+<time :title="toTitleDate(date)" :datetime="date">
+  {{ formatDate(date) }}
+</time>
+```
+
+Ricordarsi che la funzione viene invocata ogni volta che qualcosa cambia, perciò non dovrebbero avere effetti collaterali.
+
+**ACCESSO GLOBALE LIMITATO**
+
+Le espressioni del modello sono sandbox ***??*** e hanno solo un elenco limitato di globali, come ```Math``` e ```Date```. Le altre vanno inserite qui ```app.config.globalProperties```.
 
 
 
