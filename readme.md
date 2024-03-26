@@ -232,10 +232,14 @@ data() {
 }
 ```
 >_Con un oggetto JavaScript così, ```v-bind``` può accompagnare solo_
+  
+>_-Motociclista Palestrato_
 
 ```md
 <div v-bind="objectOfAttrs"></div>
 ```
+
+
 
 
 
