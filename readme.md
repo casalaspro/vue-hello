@@ -277,6 +277,18 @@ Ricordarsi che la funzione viene invocata ogni volta che qualcosa cambia, perci√
 
 Le espressioni del modello sono sandbox ***??*** e hanno solo un elenco limitato di globali, come ```Math``` e ```Date```. Le altre vanno inserite qui ```app.config.globalProperties```.
 
+**DIRETTIVE**
+
+Le direttive accettano solo un'espressione ad eccezione di ```v-on```, ```v-for```, ```v-slot```.
+
+```md
+<p v-if="seen">Now you see me</p>
+```
+Qui la direttiva inserisce/rimuove il p a seconda della veridicit√† della viariabile ```seen```.
+
+
+
+
 
 
 
