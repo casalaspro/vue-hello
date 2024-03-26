@@ -211,6 +211,17 @@ Nell'esempio si interviene sull'id dell'elemento modificando dinamicamente la va
 <div v-bind:id></div>
 ```
 
+**ATTRIBUTI BOOLEANI**
+
+```md
+<button :disabled="isButtonDisabled">Button</button>
+```
+
+In questo caso il ```v-bind``` va ad inserire il contenuto della variabile solo se è ```TRUE``` o se la stringa è vuota ```:disabled=""```.
+
+
+
+
 
 
 
