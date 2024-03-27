@@ -306,7 +306,20 @@ In questo caso il contenuto della variabile ```url``` viene inserita nell'attrib
 ```
 Qui invece ```v-on``` è l'attributo speciale che inserisce un eventListener all'elemento ed il suo argomento è il tipo di evento ```click```. Si può notare l'abbreviazione con la ```@```.
 
+**ARGOMENTI DINAMICI**
 
+```MD
+<!--
+Note that there are some constraints to the argument expression,
+as explained in the "Dynamic Argument Value Constraints" and "Dynamic Argument Syntax Constraints" sections below.
+-->
+<a v-bind:[attributeName]="url"> ... </a>
+
+<!-- shorthand -->
+<a :[attributeName]="url"> ... </a>
+```
+
+Così possiamo far ricevere il contenuto della variabile ```attributeName```.
 
 
 
